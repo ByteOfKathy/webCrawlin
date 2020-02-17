@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+  <servlet>
+    <servlet-name>mailsenderservlet</servlet-name><!--邮件发送程序-->
+    <servlet-class>com.email.MailSenderServlet</servlet-class>
+    <init-param>
+      <param-name>server</param-name><!--邮件服务器SMTP地址-->
+      <param-value>smtp.163.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>port</param-name><!--邮件服务器SMTP端口-->
+      <param-value>25</param-value>
+    </init-param>
+    <init-param>
+      <param-name>address</param-name><!--邮件地址-->
+      <param-value>username@163.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>username</param-name><!--邮件账号-->
+      <param-value>username</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name><!--密码-->
+      <param-value>******</param-value>
+    </init-param>
+    <init-param>
+      <param-name>validate</param-name><!--SMTP服务器是否要求验证-->
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>time</param-name><!--扫描数据库时间间隔（分钟）-->
+      <param-value>5</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+</web-app> 
